@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563EB;
+  --color-accent: #F59E0B;
+  --color-danger: #EF4444;
+  --color-success: #10B981;
+  --color-bg: #F8FAFC;
+  --color-panel: #FFFFFF;
+  --color-text: #1E293B;
+  --color-text-secondary: #64748B;
+  --color-border: #E2E8F0;
+}
+
+@keyframes marker-bounce {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.marker-bounce {
+  animation: marker-bounce 300ms ease-out;
+}
+
+.amap-marker-label {
+  border: none !important;
+  background: rgba(30, 41, 59, 0.85) !important;
+  color: #fff !important;
+  border-radius: 4px !important;
+  padding: 2px 6px !important;
+  font-size: 12px !important;
+  white-space: nowrap !important;
+}
+
+.map-bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 200ms ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.map-bubble:hover {
+  transform: scale(1.1);
+}
+
+.map-bubble-tooltip {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(30, 41, 59, 0.9);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  margin-bottom: 6px;
+  z-index: 10;
+}
+
+.map-bubble:hover .map-bubble-tooltip {
+  display: block;
+}
+
+.map-pin {
+  cursor: pointer;
+  transform-origin: bottom center;
+}
