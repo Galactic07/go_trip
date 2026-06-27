@@ -1,0 +1,10 @@
+server:
+  port: 8080
+database:
+  host: 127.0.0.1
+  port: 3306
+  user: root
+  password: YOUR_DB_PASSWORD
+  dbname: gotrip
+amap:
+  web_service_key: YOUR_AMAP_WEB_SERVICE_KEY
